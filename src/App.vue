@@ -2,6 +2,7 @@
   <div class=" components">
     <Header />
     <Presentation />
+    <Services/>
   </div>
 </template>
 
@@ -9,9 +10,11 @@
 import { defineComponent } from 'vue'
 import { Header } from '@/components/organisms'
 import { Presentation } from '@/components/organisms'
+import { Services } from '@/components/organisms'
+
 
 export default defineComponent({
-  components: { Header, Presentation }
+  components: { Header, Presentation,Services }
 })
 </script>
 <style lang="scss" scoped>
