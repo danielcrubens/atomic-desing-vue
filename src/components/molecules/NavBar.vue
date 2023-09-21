@@ -19,7 +19,15 @@
   </script>
 
   <style lang="scss" scoped>
+    @mixin sm {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
   .nav-bar {
+    @include sm{
+      display:none
+    }
   width: max-content;
   display: grid;
   grid-auto-flow: column;

@@ -16,8 +16,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+  @mixin sm {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
 .presentation {
-  margin-top: 5rem;
   position: relative;
   display: grid;
   justify-content: center;
@@ -28,6 +32,9 @@ export default defineComponent({
   }
 
   .socialNetworks {
+    @include sm{
+      display: none;
+    }
     position: absolute;
     left: 0;
     top: 50%;
@@ -35,7 +42,10 @@ export default defineComponent({
   }
 
   .ilustration {
-    width: 50rem;
+    @include sm{
+      width: 100%;
+    }
+    width: 48rem;
   }
 }
 </style>
